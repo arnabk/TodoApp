@@ -21,14 +21,6 @@ Running test
     $ yarn
     $ yarn test
 
-## TODO items
-
-- Add tests with mocha
-- Add istanbul
-- Add persistence local storage
-- Add option to just show active items and not the completed items 
-
-
 ## Validity check of package.json
 
 Run `npm ls` to check if your project's inter-dependent packages are version compatible.
