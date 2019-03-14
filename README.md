@@ -21,6 +21,7 @@ Running test
     $ yarn
     $ yarn test
 
+<<<<<<< HEAD
 ## TODO items
 
 - Add tests with mocha
@@ -29,6 +30,8 @@ Running test
 - Add option to just show active items and not the completed items 
 
 
+=======
+>>>>>>> 4f27d9a7130a9b5a390c6eebb1198825aeff3122
 ## Validity check of package.json
 
 Run `npm ls` to check if your project's inter-dependent packages are version compatible.
