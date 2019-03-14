@@ -21,17 +21,19 @@ Running test
     $ yarn
     $ yarn test
 
-<<<<<<< HEAD
 ## TODO items
 
 - Add tests with mocha
 - Code coverage through coverage.io is not working
 - Add persistence local storage
 - Add option to just show active items and not the completed items 
+- Convert the project to create-react-app
+- Remove redux and use Hooks
+- Upgrade the project to latest version
+- Find out ways to show coverage details on this page after generating image from internal Jenkins
+- Find out ways to show build status on this page after generating image from internal Jenkins
 
 
-=======
->>>>>>> 4f27d9a7130a9b5a390c6eebb1198825aeff3122
 ## Validity check of package.json
 
 Run `npm ls` to check if your project's inter-dependent packages are version compatible.
