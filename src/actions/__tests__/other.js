@@ -22,10 +22,11 @@ describe('Test other.js', () => {
   });
 
   it ("changeShowType", () => {
+    const isSelected = false;
     const expected = {
       type: CHANGE_SHOW_TYPE,
-      isSelected: false,
+      isSelected,
     };
-    expect(changeShowType(false)).to.be.deep.equal(expected);
+    expect(changeShowType(isSelected)).to.be.deep.equal(expected);
   });
 });

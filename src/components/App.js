@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import LightbulbOutlineIcon from 'material-ui/svg-icons/action/lightbulb-outline';
@@ -13,6 +14,20 @@ import Input from './Input';
 import ShowType from './ShowType';
 import ToDoItem from './ToDoItem';
 import { lightTheme, darkTheme, SHOW_TYPE_ALL } from '../common/Constants';
+import { addItem as _addItem, changeItemType, deleteItem } from '../actions/todo';
+import { changeThemeAction, changeShowType, changeText } from '../actions/other';
+
+const mapStateToProps =
+  ({ themeName, showType, text, items }) => ({ themeName, showType, text, items });
+
+const mapDispatchToProps = dispatch => ({
+  addItem: text => dispatch(_addItem(text)),
+  onShowTypeChange: type => dispatch(changeShowType(type)),
+  onThemeChange: () => dispatch(changeThemeAction()),
+  onItemClick: (index, isSelected) => dispatch(changeItemType(index, isSelected)),
+  onDelete: index => dispatch(deleteItem(index)),
+  onTextChange: text => dispatch(changeText(text)),
+});
 
 const Component = (props) => {
   const { text, addItem, onShowTypeChange, items, onTextChange, showType,
@@ -88,4 +103,4 @@ Component.defaultProps = {
   onTextChange: () => {},
 };
 
-export default Component;
+export default connect(mapStateToProps, mapDispatchToProps)(Component);

@@ -24,7 +24,7 @@ Running test
 ## TODO items
 
 - Add tests with mocha
-- Add istanbul
+- Code coverage through coverage.io is not working
 - Add persistence local storage
 - Add option to just show active items and not the completed items 
 

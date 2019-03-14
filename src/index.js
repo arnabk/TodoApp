@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { List } from 'immutable';
 import './style.scss';
 import reducers from './reducers';
-import App from './containers/App';
+import App from './components/App';
 import { SHOW_TYPE_ALL, lightTheme } from './common/Constants';
 import changeTextSaga from './sagas/changeText';
 
